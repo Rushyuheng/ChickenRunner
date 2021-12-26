@@ -354,5 +354,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain
       objectReference: {fileID: 0}
+    - target: {fileID: 6079194254223230319, guid: a1e61f63f5dfd01419e50e7e95447df6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6079194255854421635, guid: a1e61f63f5dfd01419e50e7e95447df6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1e61f63f5dfd01419e50e7e95447df6, type: 3}

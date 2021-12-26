@@ -306,6 +306,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1269150747874864696, guid: 53a4b1727d47e3f4eaee04f10efe0373, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2213110728916905690, guid: 6c0492ec64e98194f801795ea282dd3d, type: 3}
     - target: {fileID: 3098509507189852821, guid: 53a4b1727d47e3f4eaee04f10efe0373, type: 3}
       propertyPath: m_Name
       value: Snow terrain
