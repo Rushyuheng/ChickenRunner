@@ -11,14 +11,14 @@ public class PickRacetrack : MonoBehaviour,IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         if (button.name.Contains("1")) {
-            SceneManager.LoadScene("RaceTrack1", LoadSceneMode.Single);
+            SceneManager.LoadScene("forestLevel", LoadSceneMode.Single);
         }
         else if (button.name.Contains("2")) {
-            SceneManager.LoadScene("RaceTrack2", LoadSceneMode.Single);
+            SceneManager.LoadScene("DesertLevel", LoadSceneMode.Single);
         }
         else if (button.name.Contains("3"))
         {
-            SceneManager.LoadScene("RaceTrack3", LoadSceneMode.Single);
+            SceneManager.LoadScene("SnowLevel", LoadSceneMode.Single);
         }
     }
 
