@@ -16,6 +16,10 @@ public class PickRacetrack : MonoBehaviour,IPointerClickHandler
         else if (button.name.Contains("2")) {
             SceneManager.LoadScene("RaceTrack2", LoadSceneMode.Single);
         }
+        else if (button.name.Contains("3"))
+        {
+            SceneManager.LoadScene("RaceTrack3", LoadSceneMode.Single);
+        }
     }
 
     // Start is called before the first frame update
