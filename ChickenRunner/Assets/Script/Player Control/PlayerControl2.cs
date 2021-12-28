@@ -6,7 +6,10 @@ public class PlayerControl2 : MonoBehaviour
 {
     public Rigidbody rb;
     public float forwardSpeed, reverseSpeed, turnSpeed;
+    public bool isGrounded;
+    public LayerMask ground;
     private float moveInput, turnInput;
+
     void Start()
     {
         rb.transform.parent = null;
@@ -29,6 +32,15 @@ public class PlayerControl2 : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb.AddForce(transform.forward * moveInput, ForceMode.Acceleration);
+        RaycastHit hit;
+        isGrounded = Physics.Raycast(transform.position, -transform.up, out hit, 1f, ground);
+        if (isGrounded)
+        {
+            rb.AddForce(transform.forward * moveInput, ForceMode.Acceleration);
+        }
+        else
+        {
+            rb.AddForce(transform.up * -100f);
+        }
     }
 }
