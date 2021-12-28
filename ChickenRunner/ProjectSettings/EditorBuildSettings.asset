@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: 961d7d1633ec48143b04dd4c5be84a27
   - enabled: 1
-    path: Assets/Scenes/forestLevel.unity
+    path: Assets/Scenes/RaceTrack1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/RaceTrack2.unity
