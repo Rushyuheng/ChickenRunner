@@ -10,9 +10,13 @@ public class PlayerControl2 : MonoBehaviour
     public LayerMask ground;
     private float moveInput, turnInput;
 
+    bool Run = false;
+    Animator animator;
+
     void Start()
     {
         rb.transform.parent = null;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -29,6 +33,11 @@ public class PlayerControl2 : MonoBehaviour
 
         //set the sphere with the car
         transform.position = rb.transform.position;
+
+        //check press key for run animations
+        Run = false;
+        if (Input.GetKey(KeyCode.UpArrow)) Run = true;
+        animator.SetBool("Run", Run);
     }
     private void FixedUpdate()
     {
