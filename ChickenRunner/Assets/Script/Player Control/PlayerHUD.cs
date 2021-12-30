@@ -9,7 +9,10 @@ public class PlayerHUD : MonoBehaviour
     private Image barrier;
 
     public void ShowItem(int index) {
-        if (index == 1)
+        if (index == 0) {
+            HideItem();
+        }
+        else if (index == 1)
         {
             speedUp.enabled = true;
         }
@@ -19,9 +22,9 @@ public class PlayerHUD : MonoBehaviour
 
     }
 
-    public void HideItem() {
+    private void HideItem() {
         speedUp.enabled = false;
-        barrier.enabled = true;
+        barrier.enabled = false;
     }
     // Start is called before the first frame update
     void Start()

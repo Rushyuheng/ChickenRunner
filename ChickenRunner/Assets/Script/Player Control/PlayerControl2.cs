@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class PlayerControl2 : MonoBehaviour
 {
+    const float forwardSpeedLimit = 100f, SpeedUpEffectTimeLimit = 5.0f;
+
     public Rigidbody rb;
     public float forwardSpeed, reverseSpeed, turnSpeed;
     public bool isGrounded;
     public LayerMask ground;
-    private float moveInput, turnInput;
-    private int itemIndex = 0;
     public PlayerHUD player2HUD;
 
-    bool Run = false;
-    Animator animator;
+    private float moveInput, turnInput, SpeedUpEffectTime = SpeedUpEffectTimeLimit;
+    private int itemIndex = 0;
+    private bool isSpeedUp = false;
+    private bool Run = false;
+    private Animator animator;
 
     void Start()
     {
@@ -40,6 +43,17 @@ public class PlayerControl2 : MonoBehaviour
         Run = false;
         if (Input.GetKey(KeyCode.UpArrow)) Run = true;
         animator.SetBool("Run", Run);
+        //press space to use item if item is availible
+        if (Input.GetKey(KeyCode.Keypad0) && itemIndex > 0)
+        {
+            UseItem();
+        }
+
+        //check item effect timer
+        if (isSpeedUp)
+        {
+            SpeedUpTimer();
+        }
     }
     private void FixedUpdate()
     {
@@ -58,5 +72,27 @@ public class PlayerControl2 : MonoBehaviour
     {
         itemIndex = Random.Range(1, 3);
         player2HUD.ShowItem(itemIndex);
+    }
+
+    private void UseItem()
+    {
+        if (itemIndex == 1)
+        { // speed up 1.5x
+            forwardSpeed *= 2.0f;
+            isSpeedUp = true;
+        }
+        itemIndex = 0;
+        player2HUD.ShowItem(itemIndex);
+    }
+
+    private void SpeedUpTimer()
+    {
+        SpeedUpEffectTime -= Time.deltaTime;
+        if (SpeedUpEffectTime <= 0)
+        {
+            forwardSpeed = forwardSpeedLimit;
+            isSpeedUp = false;
+            SpeedUpEffectTime = SpeedUpEffectTimeLimit;
+        }
     }
 }
