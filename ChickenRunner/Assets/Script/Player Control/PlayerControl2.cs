@@ -10,7 +10,7 @@ public class PlayerControl2 : MonoBehaviour
     public LayerMask ground;
     private float moveInput, turnInput;
     private int itemIndex = 0;
-    public Player2HUD player2HUD;
+    public PlayerHUD player2HUD;
 
     bool Run = false;
     Animator animator;
@@ -56,7 +56,7 @@ public class PlayerControl2 : MonoBehaviour
     }
     public void GetItem()
     {
-        itemIndex = Random.Range(1, 2);
+        itemIndex = Random.Range(1, 3);
         player2HUD.ShowItem(itemIndex);
     }
 }

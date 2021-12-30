@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Player1HUD : MonoBehaviour
+public class PlayerHUD : MonoBehaviour
 {
-    public Image speedUp;
-    public Image barrier;
+    private Image speedUp;
+    private Image barrier;
 
     public void ShowItem(int index) {
         if (index == 1)
@@ -18,10 +18,16 @@ public class Player1HUD : MonoBehaviour
         }
 
     }
+
+    public void HideItem() {
+        speedUp.enabled = false;
+        barrier.enabled = true;
+    }
     // Start is called before the first frame update
     void Start()
     {
-        
+        speedUp = this.gameObject.GetComponentsInChildren<Image>()[1];
+        barrier = this.gameObject.GetComponentsInChildren<Image>()[2];
     }
 
     // Update is called once per frame

@@ -8,7 +8,7 @@ public class PlayerControl1 : MonoBehaviour
     public float forwardSpeed, reverseSpeed, turnSpeed;
     public bool isGrounded;
     public LayerMask ground;
-    public Player1HUD player1HUD;
+    public PlayerHUD player1HUD;
     private float moveInput, turnInput;
     private int itemIndex = 0;
 
@@ -55,7 +55,7 @@ public class PlayerControl1 : MonoBehaviour
     }
 
     public void GetItem() {
-        itemIndex = Random.Range(1, 2);
+        itemIndex = Random.Range(1, 3);
         player1HUD.ShowItem(itemIndex);
     }
 }

@@ -27,7 +27,6 @@ public class Chest : MonoBehaviour
     void Start()
     {
         player1 = GameObject.FindObjectOfType<PlayerControl1>();
-        Debug.Log(player1);
         player2 = GameObject.FindObjectOfType<PlayerControl2>();
     }
 
