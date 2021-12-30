@@ -17,11 +17,13 @@ public class PlayerControl2 : MonoBehaviour
     private bool isSpeedUp = false;
     private bool Run = false;
     private Animator animator;
+    private DropBarrier dropBarrier;
 
     void Start()
     {
         rb.transform.parent = null;
         animator = GetComponent<Animator>();
+        dropBarrier = GetComponentInChildren<DropBarrier>();
     }
 
     void Update()
@@ -80,6 +82,10 @@ public class PlayerControl2 : MonoBehaviour
         { // speed up 1.5x
             forwardSpeed *= 2.0f;
             isSpeedUp = true;
+        }
+        else if (itemIndex == 2)
+        {
+            dropBarrier.Drop();
         }
         itemIndex = 0;
         player2HUD.ShowItem(itemIndex);
