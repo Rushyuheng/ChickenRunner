@@ -9,6 +9,8 @@ public class PlayerControl2 : MonoBehaviour
     public bool isGrounded;
     public LayerMask ground;
     private float moveInput, turnInput;
+    private int itemIndex = 0;
+    public Player2HUD player2HUD;
 
     bool Run = false;
     Animator animator;
@@ -51,5 +53,10 @@ public class PlayerControl2 : MonoBehaviour
         {
             rb.AddForce(transform.up * -100f);
         }
+    }
+    public void GetItem()
+    {
+        itemIndex = Random.Range(1, 2);
+        player2HUD.ShowItem(itemIndex);
     }
 }
