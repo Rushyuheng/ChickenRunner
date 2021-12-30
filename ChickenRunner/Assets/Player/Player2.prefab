@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 3982722252773985736}
   - component: {fileID: 3982722252773985737}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Player2Physic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -6,7 +6,8 @@ public class Chest : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name.Contains("player"))
+        Debug.Log(other.gameObject.name);
+        if (other.gameObject.name.Contains("Player"))
         {
             Destroy(gameObject, 0.01f);
             //TODO
