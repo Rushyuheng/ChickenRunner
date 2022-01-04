@@ -46,7 +46,7 @@ public class PlayerControl2 : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow)) Run = true;
         animator.SetBool("Run", Run);
         //press space to use item if item is availible
-        if (Input.GetKey(KeyCode.Keypad0) && itemIndex > 0)
+        if (Input.GetKey(KeyCode.Slash) && itemIndex > 0)
         {
             UseItem();
         }
