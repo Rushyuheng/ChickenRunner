@@ -7,11 +7,13 @@ public class ChestSpawner : MonoBehaviour
     public GameObject chest;
     private float targetTime = 45.0f;
     const float spawnDuration = 45.0f;
-
+    
     private void SpawnChest() {
         GameObject concreteChest = Instantiate(chest);
         concreteChest.transform.parent = transform;
         concreteChest.transform.localPosition = Vector3.zero;
+        concreteChest.transform.localRotation = transform.localRotation;
+        concreteChest.transform.localScale = new Vector3(2f, 2f, 2f);
     }
 
     // Start is called before the first frame update

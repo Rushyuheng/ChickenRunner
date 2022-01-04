@@ -32,11 +32,15 @@ public class gameManager : MonoBehaviour
         else {
             box.isTrigger = true;
         }
+    }
+
+    void printWinner() {//only check if lap is working
         if (player1_lap == 4)
         {
             Debug.Log("Player 1 wins!");
         }
-        else if(player2_lap == 4){
+        else if (player2_lap == 4)
+        {
             Debug.Log("Player 2 wins!");
         }
     }

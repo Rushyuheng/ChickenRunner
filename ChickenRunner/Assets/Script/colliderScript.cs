@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class colliderScript : MonoBehaviour
 {
-    [SerializeField] GameObject p1;
-    [SerializeField] GameObject p2;
     // Start is called before the first frame update
     void Start()
     {
