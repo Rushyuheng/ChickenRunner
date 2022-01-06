@@ -29,7 +29,7 @@ public class gameManager : MonoBehaviour
         {
             counter += Time.deltaTime;
         }
-        else {
+        else if(counter >= 3f && counter <= 4f){ // set to call only once to avoid overhead
             box.isTrigger = true;
         }
     }

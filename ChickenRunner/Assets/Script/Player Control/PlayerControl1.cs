@@ -42,7 +42,7 @@ public class PlayerControl1 : MonoBehaviour
 
         //check press key for run animations
         Run = false;
-        if (Input.GetKey(KeyCode.W)) Run = true;
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)) Run = true;
         animator.SetBool("Run", Run);
         //press space to use item if item is availible
         if (Input.GetKey(KeyCode.Space) && itemIndex > 0) {
