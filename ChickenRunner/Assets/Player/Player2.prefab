@@ -1875,7 +1875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 3982722252773985737}
   forwardSpeed: 100
-  reverseSpeed: 0
+  reverseSpeed: 50
   turnSpeed: 50
   isGrounded: 0
   ground:
