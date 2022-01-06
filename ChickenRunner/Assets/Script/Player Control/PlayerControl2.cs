@@ -14,8 +14,7 @@ public class PlayerControl2 : MonoBehaviour
 
     private float moveInput, turnInput, SpeedUpEffectTime = SpeedUpEffectTimeLimit;
     private int itemIndex = 0;
-    private bool isSpeedUp = false;
-    private bool Run = false;
+    private bool isSpeedUp = false, Run = false;
     private Animator animator;
     private DropBarrier dropBarrier;
 
