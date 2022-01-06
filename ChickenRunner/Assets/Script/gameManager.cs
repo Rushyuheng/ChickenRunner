@@ -12,7 +12,6 @@ public class gameManager : MonoBehaviour
     public int player1_lap;
     public int player2_lap;
     public static gameManager inst;
-    private GameOver gameover;
     public bool gameGoing = false;
 
     public Image one, two;
