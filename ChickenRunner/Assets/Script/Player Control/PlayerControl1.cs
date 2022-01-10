@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControl1 : MonoBehaviour
 {
     const float forwardSpeedLimit = 100f, SpeedUpEffectTimeLimit = 5.0f;
 
     public Rigidbody rb;
-    public float forwardSpeed = forwardSpeedLimit, reverseSpeed, turnSpeed;
+    public float forwardSpeed = forwardSpeedLimit, reverseSpeed = 50f, turnSpeed = 50f;
     public bool isGrounded;
     public LayerMask ground;
     public PlayerHUD player1HUD;
@@ -46,6 +47,12 @@ public class PlayerControl1 : MonoBehaviour
         //press space to use item if item is availible
         if (Input.GetKey(KeyCode.Space) && itemIndex > 0) {
             UseItem();
+        }
+
+        // to menu
+
+        if (Input.GetKey(KeyCode.M)) {
+            SceneManager.LoadScene("StartMenu", LoadSceneMode.Single);
         }
 
         //check item effect timer

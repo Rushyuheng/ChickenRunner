@@ -7,7 +7,7 @@ public class PlayerControl2 : MonoBehaviour
     const float forwardSpeedLimit = 100f, SpeedUpEffectTimeLimit = 5.0f;
 
     public Rigidbody rb;
-    public float forwardSpeed, reverseSpeed, turnSpeed;
+    public float forwardSpeed = forwardSpeedLimit, reverseSpeed = 50f, turnSpeed = 50f;
     public bool isGrounded;
     public LayerMask ground;
     public PlayerHUD player2HUD;
